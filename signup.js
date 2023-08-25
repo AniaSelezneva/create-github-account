@@ -73,21 +73,9 @@ const waitForSubmitAndClick = async (page, cursor, name) => {
 };
 
 const getCapchaIframe = async (page) => {
-  const firstIframeElement = await page.$(
-    'iframe[title="Please verify by completing this captcha."]'
-  );
-  const firstIframe = await firstIframeElement.contentFrame();
+  const frames = await page.frames();
 
-  const secondIframeElement = await firstIframe.$(
-    'iframe[title="Verification challenge"]'
-  );
-  const secondIframe = await secondIframeElement.contentFrame();
-
-  const thirdIframeElement = await secondIframe.$(
-    'iframe[id="game-core-frame"]'
-  );
-
-  return await thirdIframeElement.contentFrame();
+  return frames[3];
 };
 
 const clickVerify = async (page, cursor) => {

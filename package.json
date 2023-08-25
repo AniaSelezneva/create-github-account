@@ -1,0 +1,23 @@
+{
+  "name": "create-github-account",
+  "version": "1.0.0",
+  "description": "",
+  "main": "signup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon signup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ghost-cursor": "^1.1.19",
+    "puppeteer": "21.1.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  }
+}

@@ -142,6 +142,7 @@ const fillAndSubmitSignupForm = async (
   const page = await browser.newPage();
   const cursor = createCursor(page);
 
+  page.setDefaultTimeout(200000);
   await page.setDefaultNavigationTimeout(120000);
 
   try {
